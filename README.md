@@ -18,7 +18,7 @@ npm run preview   # sert dist/ sur http://localhost:4180/
 
 Commandes : souris pour viser, clic ou Espace pour tirer (maintenir pour répéter), flèches pour viser, Échap pour le menu, D pour le diagnostic. Sur mobile : glisser dans la zone de visée, bouton « Tirer ». Paramètres d'URL : `?quality=low|medium|high`, `?diag=1`, `?seed=…`.
 
-Publication prévue : **GitHub Pages uniquement**, à l'adresse <https://skhedim.github.io/coin-cascade/> une fois activée. Le dépôt est privé pour l'instant ; sur l'offre gratuite, Pages exige un dépôt public. Dès que Pages est actif, chaque push sur `main` lance les tests, construit `dist/` et le publie (`.github/workflows/deploy.yml`). Le même `dist/` fonctionne aussi à la racine d'un domaine personnalisé. Voir [docs/07-HEBERGEMENT.md](docs/07-HEBERGEMENT.md).
+Publication prévue : **GitHub Pages uniquement**, à l'adresse <https://skhedim.github.io/coin-cascade/> une fois activée. Le dépôt est public ; reste à activer Pages (Settings > Pages > Source : « GitHub Actions »). Ensuite, chaque push sur `main` lance les tests, construit `dist/` et le publie (`.github/workflows/deploy.yml`). Le même `dist/` fonctionne aussi à la racine d'un domaine personnalisé. Voir [docs/07-HEBERGEMENT.md](docs/07-HEBERGEMENT.md).
 
 ## Reprendre avec Claude ou Codex
 
