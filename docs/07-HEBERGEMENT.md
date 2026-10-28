@@ -39,6 +39,9 @@ Quand l'utilisateur choisit le service, fournir les étapes correspondant au dé
 
 ## État de la publication (2026-10-28)
 
-- Dépôt : <https://github.com/skhedim/coin-cascade> (public, car GitHub Pages gratuit l'exige).
-- Site : <https://skhedim.github.io/coin-cascade/>, déployé par `.github/workflows/deploy.yml` à chaque push sur `main` : `npm ci`, `npm test`, `npm run build`, puis publication de `dist/`.
-- Source Pages réglée sur « GitHub Actions ». La base relative (`./`) évite toute configuration de chemin.
+- Dépôt créé **privé** : <https://github.com/skhedim/coin-cascade>, branche `main` poussée. Passer en public est une décision de l'utilisateur : l'outil de Claude a bloqué la création publique sans son accord explicite.
+- GitHub Pages **n'est pas encore activé**. Sur l'offre gratuite, Pages exige un dépôt public. Étapes, à lancer par l'utilisateur ou à confier explicitement à Claude :
+  1. `gh repo edit skhedim/coin-cascade --visibility public --accept-visibility-change-consequences`
+  2. `gh api -X POST repos/skhedim/coin-cascade/pages -f build_type=workflow`
+  3. `gh workflow run deploy.yml -R skhedim/coin-cascade`
+- Ensuite, chaque push sur `main` lance `npm ci`, `npm test` et `npm run build`, puis publie `dist/` sur <https://skhedim.github.io/coin-cascade/>. La base relative (`./`) évite toute configuration de chemin.

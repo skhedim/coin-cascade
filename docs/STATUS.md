@@ -7,7 +7,7 @@ Mis à jour : 2026-10-28, 23 h (Europe/Paris), après la troisième session de C
 - Prototype **jouable** : machine 3D procédurale (Three.js) et physique Rapier, modes libre, défi et bac à sable, bonus J3/J4, sauvegarde locale, sons synthétisés, menu avec réglages et préréglages opérateur.
 - Cinq images finales livrées par Codex : faces classique/dorée, décal du mur de fond et fonds paysage/portrait, marquées `ready` et chargées par le code existant. Les huit autres assets restent `planned` avec fallbacks.
 - ART-001 et ART-002 sont `integrated` : face classique, fonds paysage et portrait, décal du mur de fond, face dorée. Les 8 autres assets (7 illustrations de bonus et l'emblème, lot B facultatif) restent `planned` avec leurs fallbacks SVG ou CSS.
-- Dépôt public <https://github.com/skhedim/coin-cascade>, publié sur **GitHub Pages uniquement** : <https://skhedim.github.io/coin-cascade/> (Render abandonné, D025). Chaque push sur `main` teste, construit et déploie.
+- Dépôt **privé** <https://github.com/skhedim/coin-cascade>, `main` poussée. GitHub Pages est la seule cible (Render abandonné, D025) mais **pas encore activé** : il faut d'abord rendre le dépôt public (offre gratuite). Étapes dans `docs/07-HEBERGEMENT.md`.
 - Pas de dépôt git local (non demandé).
 
 ## Commandes
@@ -35,7 +35,7 @@ Paramètres d'URL utiles : `?quality=low|medium|high`, `?diag=1` (diagnostic ouv
 - [x] **J4** Bonus complets : roue (résultat engagé et sauvegardé avant l'animation, payé une fois), coffres, barrières, super poussée, onde de choc, tirs gratuits et dorés, gemmes, collection de session, album et quatre jackpots. Tout se force dans le bac à sable.
 - [x] **J5** Opérateur et progression : préréglages Classique/Généreux/Chaos/Détente, 14 paramètres bornés et expliqués, import/export des réglages, bac à sable, records de défi par règles et seed, 4 trophées, album, tir automatique (bouton « Auto » ou touche A, 50 tirs au plus, arrêt sur bonus majeur), 8 conseils contextuels et **4 thèmes** (Néon or ; Saphir, Émeraude et Rubis débloqués par trophée ; purement visuels, hors règles). *Écart assumé :* les paramètres opérateur s'appliquent tous par reconstruction de la machine (D019), pas « à la prochaine action ».
 - [~] **J6** Presque complet. Fait : ART-001 et ART-002 intégrées, pièce dorée renforcée, qualité basse/moyenne/haute, effets réduits, robustesse vérifiée en navigateur (reprise, seconde fenêtre, stockage indisponible, import invalide), partie longue de 15 min simulées sans anomalie ni fuite (banc `--scenario=long`). *Restent :* mesures sur GPU et téléphone réels.
-- [x] **J7** Livraison statique : workflow GitHub Pages (tests puis build puis déploiement), `.node-version`, licences dans `assets/CREDITS.md`, dépôt créé et site publié (vérification de l'URL réelle consignée plus bas).
+- [~] **J7** Livraison statique : workflow GitHub Pages (tests puis build puis déploiement), `.node-version`, licences dans `assets/CREDITS.md`, dépôt créé et poussé. *Reste :* passer le dépôt en public, activer Pages, vérifier l'URL réelle.
 
 ## Vérifications réellement effectuées (2026-10-28, machine de développement WSL2, 22 cœurs)
 
@@ -102,7 +102,7 @@ D010 à D021 dans `docs/DECISIONS.md` : collider et échelle Rapier, mécanique 
 
 ## Prochaine tâche concrète
 
-1. **Utilisateur** : jouer sur <https://skhedim.github.io/coin-cascade/> depuis Windows et depuis un téléphone ; noter le FPS et le pas physique p95 (touche D).
+1. **Utilisateur** : décider de passer le dépôt en public, puis activer Pages (commandes dans `docs/07-HEBERGEMENT.md`, ou le demander explicitement à Claude). Jouer ensuite sur <https://skhedim.github.io/coin-cascade/> depuis Windows et un téléphone, et noter le FPS et le pas physique p95 (touche D).
 2. **Claude (session suivante)** : corriger d'après les mesures sur appareils réels. Publier quand l'hébergement sera choisi (J7), puis vérifier l'URL réelle. En option : demander l'emblème et les illustrations de bonus (lot B) pour l'écran de chargement et les annonces de jackpot.
 
 ## Livraison graphique Codex — ART-001

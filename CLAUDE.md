@@ -8,4 +8,4 @@ Codex fournira les images quand les besoins seront stabilisés. Tu réalises dè
 
 Ne bloque pas sur un asset manquant : utilise le fallback de `assets/manifest.json`. Pour demander une livraison, remplis `docs/art/requests/TEMPLATE.md` dans un nouveau fichier et indique-le dans `docs/STATUS.md`.
 
-Prends les décisions courantes de manière autonome, documente les compromis et avance par jalons jouables. Publication : GitHub Pages uniquement (choix de l'utilisateur, D025). Dépôt `skhedim/coin-cascade` ; chaque push sur `main` teste, construit et publie le site. Render est abandonné.
+Prends les décisions courantes de manière autonome, documente les compromis et avance par jalons jouables. Publication : GitHub Pages uniquement (choix de l'utilisateur, D025). Dépôt `skhedim/coin-cascade`, privé tant que l'utilisateur n'a pas décidé de le rendre public. Une fois Pages activé, chaque push sur `main` teste, construit et publie le site. Render est abandonné.
