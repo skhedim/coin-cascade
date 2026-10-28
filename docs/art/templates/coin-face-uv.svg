@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Gabarit UV de coin.face.classic / coin.face.gold (Coin Cascade, 2026-10-28).
+       Le disque de 88 % (rayon 225,28 px) est exactement la face plate de la pièce dans le jeu.
+       Hors de ce disque : transparent, jamais échantillonné. Le listel doré et la tranche sont géométriques.
+       Haut de l'image = fond de la machine (-Z). Les pièces tournent librement : prévoir un emblème lisible sous toute rotation. -->
+  <rect width="512" height="512" fill="#0b1426"/>
+  <circle cx="256" cy="256" r="225.28" fill="#1c3551" stroke="#f6bd54" stroke-width="2"/>
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#54e5ec" stroke-width="1" stroke-dasharray="6 6"/>
+  <line x1="256" y1="20" x2="256" y2="492" stroke="#b4c7d8" stroke-width="0.5"/>
+  <line x1="20" y1="256" x2="492" y2="256" stroke="#b4c7d8" stroke-width="0.5"/>
+  <text x="256" y="18" fill="#eef5ff" font-family="sans-serif" font-size="13" text-anchor="middle">haut = fond de la machine</text>
+  <text x="256" y="506" fill="#f6bd54" font-family="sans-serif" font-size="12" text-anchor="middle">cercle doré = bord de la face (88 % du carré)</text>
+  <text x="256" y="300" fill="#54e5ec" font-family="sans-serif" font-size="11" text-anchor="middle">pointillés : zone sûre (80 % du rayon)</text>
+</svg>

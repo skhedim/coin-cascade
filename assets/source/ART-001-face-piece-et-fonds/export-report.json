@@ -1,0 +1,50 @@
+[
+  {
+    "id": "coin.face.classic",
+    "source": "coin-v2-original.png",
+    "path": "assets/coins/classic-face.png",
+    "width": 512,
+    "height": 512,
+    "mode": "RGBA",
+    "bytes": 102914,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaBoundingBox": [
+      24,
+      23,
+      488,
+      487
+    ],
+    "cornerAlphas": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "uvBoundaryAlphaMin": 248,
+    "uvBoundaryAlphaMean": 252.08,
+    "sha256": "b4757bec5a60ad05115af63dddaabfc31407796666db5f26035d4f5fa68893e2"
+  },
+  {
+    "id": "background.landscape",
+    "source": "landscape-original.png",
+    "path": "assets/backgrounds/arcade-landscape.webp",
+    "width": 1920,
+    "height": 1080,
+    "mode": "RGB",
+    "bytes": 125984,
+    "sha256": "19381ea2f10ddd1f8d5e80ed84d51407bd4505263dee0ff3dad90ea3c8946e86"
+  },
+  {
+    "id": "background.portrait",
+    "source": "portrait-original.png",
+    "path": "assets/backgrounds/arcade-portrait.webp",
+    "width": 1080,
+    "height": 1920,
+    "mode": "RGB",
+    "bytes": 104522,
+    "sha256": "51ebbe1a5c242f0cecc5126040c9658202790e8d226904f285f2233d363c1f7f"
+  }
+]

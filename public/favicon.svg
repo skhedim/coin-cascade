@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fallback `svg-three-cascading-coins` de brand.emblem : trois pièces en cascade. -->
+  <rect width="64" height="64" rx="14" fill="#080d1b"/>
+  <g stroke="#7a5a1c" stroke-width="2">
+    <circle cx="22" cy="20" r="11" fill="#f6bd54"/>
+    <circle cx="32" cy="32" r="11" fill="#ffd27a"/>
+    <circle cx="42" cy="44" r="11" fill="#f6bd54"/>
+  </g>
+  <circle cx="42" cy="44" r="6" fill="none" stroke="#54e5ec" stroke-width="2.5"/>
+</svg>

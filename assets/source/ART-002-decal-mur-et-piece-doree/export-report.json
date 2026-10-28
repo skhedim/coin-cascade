@@ -1,0 +1,63 @@
+[
+  {
+    "id": "cabinet.front-decal",
+    "source": "decal-v3-original.png",
+    "path": "public/assets/cabinet/front-decal.png",
+    "width": 2048,
+    "height": 768,
+    "mode": "RGBA",
+    "bytes": 422912,
+    "sha256": "b5eb6e92b69aec82c1fe4e323d2a8952769324ee0a9143ad74542b58aebbb5a7",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "visibleAlphaBoundingBox": [
+      71,
+      68,
+      1978,
+      432
+    ],
+    "cornerAlphas": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "bottom15PercentAlphaRange": [
+      0,
+      0
+    ],
+    "belowSafeZoneAlphaRange": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": "coin.face.gold",
+    "source": "gold-original.png",
+    "path": "public/assets/coins/gold-face.png",
+    "width": 512,
+    "height": 512,
+    "mode": "RGBA",
+    "bytes": 103772,
+    "sha256": "48d8e1f34e765098e93122d7d4a7da4f81f14842fcd66af684863376e1e0a5d4",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "visibleAlphaBoundingBox": [
+      25,
+      22,
+      487,
+      486
+    ],
+    "cornerAlphas": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "uvBoundaryAlphaMin": 249
+  }
+]

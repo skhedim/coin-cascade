@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="768" viewBox="0 0 2048 768">
+  <!-- Gabarit UV de cabinet.front-decal (Coin Cascade, 2026-10-28).
+       Le rectangle entier = le mur de fond visible derrière le plateau haut : 1,06 m × 0,3975 m (rapport 8:3).
+       Haut de l'image = haut du mur. Aucune répétition, aucune perspective : décal plat posé sur un panneau marine.
+       Alpha réel : les zones transparentes laissent voir le panneau #1C3551. -->
+  <rect width="2048" height="768" fill="#1c3551"/>
+  <!-- Bande basse : souvent masquée par les tas de pièces, la barre racleuse dorée et la trémie de la goulotte. -->
+  <rect x="0" y="652" width="2048" height="116" fill="#3a0b2c" opacity="0.75"/>
+  <text x="1024" y="722" fill="#ffd6e1" font-family="sans-serif" font-size="34" text-anchor="middle">bande basse (15 %) souvent masquée : pièces, barre racleuse, goulotte</text>
+  <!-- Zone traversée par la trémie mobile de la goulotte (toute la largeur, tiers inférieur). -->
+  <rect x="0" y="460" width="2048" height="192" fill="#54e5ec" opacity="0.12"/>
+  <text x="1024" y="568" fill="#bff7fa" font-family="sans-serif" font-size="30" text-anchor="middle">tiers inférieur : la trémie de la goulotte passe devant, de gauche à droite</text>
+  <!-- Zone sûre des motifs principaux. -->
+  <rect x="62" y="40" width="1924" height="400" fill="none" stroke="#f6bd54" stroke-width="6" stroke-dasharray="24 14"/>
+  <text x="1024" y="250" fill="#f6bd54" font-family="sans-serif" font-size="40" text-anchor="middle">zone sûre des motifs principaux (toujours visible)</text>
+  <line x1="1024" y1="0" x2="1024" y2="768" stroke="#b4c7d8" stroke-width="2" opacity="0.5"/>
+  <text x="1024" y="30" fill="#eef5ff" font-family="sans-serif" font-size="26" text-anchor="middle">haut du mur · axe central de la machine</text>
+</svg>

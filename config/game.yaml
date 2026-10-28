@@ -1,0 +1,158 @@
+# Hypothèses de départ NON CALIBRÉES. Contrat : docs/02-REGLES.md.
+schemaVersion: 1
+rulesVersion: coin-cascade-v1
+locale: fr
+defaultMode: free
+seed: coin-cascade-prototype-001
+
+economy:
+  freeInitialReserve: 120
+  challengeInitialReserve: 100
+  freeManualRefill: 100
+  shotCost: 1
+
+simulation:
+  fixedStepSeconds: 0.016666666666666666
+  maxCatchUpSteps: 5
+  gravityY: -9.81
+  maxPhysicalObjects: 320
+  maxPendingRewards: 32
+  maxSpawnsPerSecond: 8
+  # Tolérances Rapier mises à l'échelle de pièces de ~10 cm (voir docs/DECISIONS.md D010).
+  lengthUnit: 0.1
+  solverIterations: 4
+  softCcdPrediction: 0.02
+
+machine:
+  # Dimensions à ajuster ensemble ; aucune obligation d'échelle réaliste.
+  # Calibrage J1 (tools/bench-physics.ts) : voir docs/DECISIONS.md D010-D012.
+  width: 1.2
+  depth: 1.2
+  # Profondeur visible du plateau haut, pousseur rentré (mur de fond → bord avant).
+  upperDeckDepth: 0.36
+  upperDeckHeight: 0.16
+  lowerDeckHeight: 0
+  sideLossWidth: 0.07
+  # Joues pleines sur l'arrière du plateau bas : les gouttières ne s'ouvrent que vers l'avant.
+  sideGuardDepth: 0.45
+  pusherPeriodSeconds: 2.4
+  pusherStroke: 0.16
+  # Cadence maximale (tir maintenu). Le débit soutenable est mesuré par tools/bench-physics.ts.
+  shotIntervalSeconds: 0.35
+  rampSpeed: 1.2
+  deckFriction: 0.15
+  initialObjects: 160
+  coin:
+    radius: 0.055
+    thickness: 0.014
+    mass: 0.02
+    # Paramètre sensible : plus haut, les tas du plateau haut atteignent la sortie de la
+    # goulotte (0.2 → refus dès 2 tirs/s) ; plus bas, la nappe flue au repos (0.1).
+    friction: 0.12
+    restitution: 0.04
+    linearDamping: 0.1
+    angularDamping: 0.4
+  # Seul objet à collider propre (boîte), plus lourd qu'une pièce : choix explicite.
+  chest: { width: 0.1, height: 0.065, depth: 0.075, mass: 0.06 }
+  initialCompositionWeights:
+    normal: 88
+    gold: 4
+    star: 3
+    wheel: 2
+    gem: 1
+    chest: 1
+    power: 1
+
+objects:
+  normal: { reserve: 1, points: 10 }
+  gold: { reserve: 5, points: 50 }
+  star: { reserve: 0, points: 25, feverCharge: 1 }
+  wheel: { reserve: 0, points: 25, wheelCharge: 1 }
+  gem: { reserve: 0, points: 100 }
+  chest: { reserve: 0, points: 50 }
+  power: { reserve: 0, points: 25 }
+
+distribution:
+  paidShotsPerSpecialOffer: 12
+  specialWeights:
+    gold: 30
+    star: 25
+    wheel: 20
+    gem: 10
+    chest: 10
+    power: 5
+  powerWeights:
+    barriers: 40
+    superPush: 30
+    shockwave: 30
+
+combo:
+  windowSeconds: 2.5
+  eligibleTypes: [normal, gold]
+  thresholds:
+    - { count: 1, multiplier: 1 }
+    - { count: 5, multiplier: 2 }
+    - { count: 12, multiplier: 3 }
+    - { count: 25, multiplier: 5 }
+  maxCombinedMultiplier: 10
+
+bonus:
+  coinRain: { count: 30 }
+  barriers: { cycles: 8, maxStackedCycles: 24 }
+  superPush: { cycles: 3, maxStackedCycles: 9, strokeFactor: 1.2 }
+  shockwave: { maxCharges: 3, impulse: 0.012 }
+  freeShots: { count: 10, maxCharges: 50 }
+  goldenShots: { count: 8, maxCharges: 30 }
+  fever:
+    starsRequired: 6
+    durationSeconds: 20
+    pointMultiplier: 2
+    extensionSeconds: 10
+    maxExtensions: 2
+
+wheel:
+  tokensRequired: 3
+  rewards:
+    - { id: reserve20, weight: 25, kind: reserve, amount: 20 }
+    - { id: rain, weight: 20, kind: coinRain }
+    - { id: barriers, weight: 15, kind: barriers }
+    - { id: freeShots, weight: 15, kind: freeShots }
+    - { id: goldenShots, weight: 12, kind: goldenShots }
+    - { id: mini, weight: 8, kind: jackpot, tier: mini }
+    - { id: minor, weight: 4, kind: jackpot, tier: minor }
+    - { id: major, weight: 1, kind: jackpot, tier: major }
+
+chest:
+  rewards:
+    - { id: reserve10, weight: 40, kind: reserve, amount: 10 }
+    - { id: rain, weight: 20, kind: coinRain }
+    - { id: barriers, weight: 15, kind: barriers }
+    - { id: superPush, weight: 10, kind: superPush }
+    - { id: shockwave, weight: 10, kind: shockwave, amount: 1 }
+    - { id: goldenShots, weight: 5, kind: goldenShots }
+
+collection:
+  gemIds: [ruby, sapphire, emerald, amethyst, diamond]
+  completedSetJackpot: grand
+
+jackpots:
+  mini: { reserve: 20, points: 500 }
+  minor: { reserve: 50, points: 1500 }
+  major: { reserve: 150, points: 5000 }
+  grand: { reserve: 500, points: 20000 }
+
+challenge:
+  quietCyclesToEnd: 3
+  maxResolutionSeconds: 45
+  allowManualRefill: false
+
+presentation:
+  theme: neon-gold
+  quality: auto
+  reducedEffects: false
+  audio: { master: 0.7, effects: 0.8, music: 0.35 }
+
+persistence:
+  formatVersion: 1
+  checkpointIntervalSeconds: 5
+  maxImportBytes: 10000000

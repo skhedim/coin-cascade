@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="theme-color" content="#080d1b" />
+    <meta name="description" content="Coin Cascade : pousse-pièces 3D pour navigateur, pièces et récompenses virtuelles." />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <title>Coin Cascade</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene" aria-label="Machine Coin Cascade"></canvas>
+
+      <div id="loading" class="screen" role="status" aria-live="polite">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <h1 class="brand">Coin Cascade</h1>
+        <p id="loading-text">Chargement…</p>
+        <div class="progress" aria-hidden="true"><div id="loading-bar"></div></div>
+      </div>
+
+      <div id="fatal" class="screen" role="alert" hidden>
+        <h1 class="brand">Coin Cascade</h1>
+        <h2 id="fatal-title">Impossible de démarrer</h2>
+        <p id="fatal-text"></p>
+        <pre id="fatal-details" hidden></pre>
+        <button type="button" class="btn" id="fatal-reload">Recharger la page</button>
+      </div>
+
+      <noscript>
+        <div class="screen"><p>Coin Cascade nécessite JavaScript et WebGL 2.</p></div>
+      </noscript>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "prefix": "/",
+    "device": "desktop",
+    "quality": "low",
+    "loopFrozenForCapture": true,
+    "assetResponses": [
+      {
+        "url": "/assets/coins/classic-face.png",
+        "status": 200
+      },
+      {
+        "url": "/assets/backgrounds/arcade-landscape.webp",
+        "status": 200
+      }
+    ],
+    "screenshot": "assets-root-desktop.png",
+    "issues": []
+  },
+  {
+    "prefix": "/",
+    "device": "mobile",
+    "quality": "low",
+    "loopFrozenForCapture": true,
+    "assetResponses": [
+      {
+        "url": "/assets/coins/classic-face.png",
+        "status": 200
+      },
+      {
+        "url": "/assets/backgrounds/arcade-portrait.webp",
+        "status": 200
+      }
+    ],
+    "screenshot": "assets-root-mobile.png",
+    "issues": []
+  },
+  {
+    "prefix": "/coin-cascade/",
+    "device": "desktop",
+    "quality": "low",
+    "loopFrozenForCapture": true,
+    "assetResponses": [
+      {
+        "url": "/coin-cascade/assets/coins/classic-face.png",
+        "status": 200
+      },
+      {
+        "url": "/coin-cascade/assets/backgrounds/arcade-landscape.webp",
+        "status": 200
+      }
+    ],
+    "screenshot": "assets-subpath-desktop.png",
+    "issues": []
+  },
+  {
+    "prefix": "/coin-cascade/",
+    "device": "mobile",
+    "quality": "low",
+    "loopFrozenForCapture": true,
+    "assetResponses": [
+      {
+        "url": "/coin-cascade/assets/coins/classic-face.png",
+        "status": 200
+      },
+      {
+        "url": "/coin-cascade/assets/backgrounds/arcade-portrait.webp",
+        "status": 200
+      }
+    ],
+    "screenshot": "assets-subpath-mobile.png",
+    "issues": []
+  }
+]
